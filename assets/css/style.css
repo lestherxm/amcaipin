@@ -1,0 +1,23 @@
+:root {
+    /*------------------ colors --------------*/
+    --primary-color: #1C6A5D;
+    --primary-color-soft: #E9FFFD;
+    --secondary-color: #000000;
+    --secondary-color-soft: #131718;
+    --background-color: #faf8f7;
+    /*------------------ Fonts --------------*/
+    --primary-ff: "DM Sans", sans-serif;
+    --secondary-ff: "Inter", sans-serif;
+    --primary-fz: 62.5%;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: var(--primary-fz);
+    font-family: var(--primary-ff);
+    scroll-behavior: smooth;
+}
+
+.top-bar .logo{
+    width: 48px;
+}
