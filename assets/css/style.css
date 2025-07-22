@@ -6,18 +6,105 @@
     --secondary-color-soft: #131718;
     --background-color: #faf8f7;
     /*------------------ Fonts --------------*/
-    --primary-ff: "DM Sans", sans-serif;
+    /* --primary-ff: "DM Sans", sans-serif; */
+    --primary-ff: "Plus Jakarta Sans", sans-serif;
     --secondary-ff: "Inter", sans-serif;
     --primary-fz: 62.5%;
 }
 
-html {
+*,
+::after,
+::before {
+    margin: 0;
     box-sizing: border-box;
+}
+
+html {
     font-size: var(--primary-fz);
     font-family: var(--primary-ff);
     scroll-behavior: smooth;
 }
 
-.top-bar .logo{
-    width: 48px;
+body{
+    font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+    line-height: 1.5;
+}
+
+.nav{
+    background-color: var(--secondary-color);
+}
+
+.nav__figure{
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: solid blue 1px; */
+}
+
+.nav__logo {
+    width: 40px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.nav__caption{
+    color: var(--primary-color-soft);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nav__container{
+    background-color: var(--secondary-color);
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    --icon-toggle-menu: url("../icons/menu-open.svg");
+    --transform-menu-show: translate(-100%);
+}
+
+.nav__container:has(.nav__input:checked){
+    --icon-toggle-menu: url("../icons/menu-close.svg");
+    --transform-menu-show: translate(0);
+}
+
+.nav__figure, .nav__toggle{
+    z-index: 10;
+}
+
+.nav__toggle {
+    width: 40px;
+    height: 40px;
+    background-image: var(--icon-toggle-menu);
+    background-size: cover;
+    cursor: pointer;
+    transition: background-image 0.5s;
+}
+
+.nav__input{
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+.nav__list{
+    transform: var(--transform-menu-show);
+    list-style-type: none;
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+    text-align: center;
+    padding: 1.5rem 5%;
+    background-color: var(--secondary-color);
+    transition: transform 0.5s;
+}
+
+.nav__link {
+    color: var(--primary-color-soft);
+    text-decoration: none;
 }
