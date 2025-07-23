@@ -80,8 +80,11 @@ body{
     height: 40px;
     background-image: var(--icon-toggle-menu);
     background-size: cover;
+    /* background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; */
     cursor: pointer;
-    transition: background-image 0.5s;
+    transition: background-image 3.5s;
 }
 
 .nav__input{
@@ -101,7 +104,7 @@ body{
     text-align: center;
     padding: 1.5rem 5%;
     background-color: var(--secondary-color);
-    transition: transform 0.5s;
+    transition: transform 3.5s;
 }
 
 .nav__link {
