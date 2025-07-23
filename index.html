@@ -36,20 +36,14 @@
                 <img    
                     src="./assets/images/logo-amcaipin-small.jpg" 
                     alt="Logo de AM CAIPIN GT"
-                    title="Logo de AMI CAIPIN GT" 
+                    title="Logo de AM CAIPIN GT" 
                     class="nav__logo"
                 >
                 <figcaption 
                     class="nav__caption">
                     AM CAIPIN GT
+                </figcaption>
             </figure>
-            <!-- <label class="nav__toggle">
-                <input 
-                    type="checkbox" 
-                    id="menu-input" 
-                    class="nav__input">
-            </label> -->
-            <!-- Botón del menú -->
             <button id="menu-toggle" class="nav__toggle" aria-label="Abrir menú">
             <img src="./assets/icons/menu-open.svg" alt="Menú" class="nav__icon">
             </button>
@@ -84,20 +78,7 @@
             </ul>
         </div>
     </nav>
-    <script>
-        const toggleButton = document.getElementById('menu-toggle');
-        const navList = document.querySelector('.nav__list');
-        const navIcon = toggleButton.querySelector('img');
-
-        let menuOpen = false;
-
-        toggleButton.addEventListener('click', () => {
-            menuOpen = !menuOpen;
-            navList.style.transform = menuOpen ? 'translate(0)' : 'translate(-100%)';
-            navIcon.src = menuOpen
-            ? './assets/icons/menu-close.svg'
-            : './assets/icons/menu-open.svg';
-        });
-    </script>
+    
+    <script src="./assets/js/toggleMenuButton.js" defer></script>
 </body>
 </html>
