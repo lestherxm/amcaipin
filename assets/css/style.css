@@ -76,8 +76,8 @@ body{
 }
 
 .nav__toggle {
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;;
     background-image: var(--icon-toggle-menu);
     background-size: cover;
     /* background-size: contain;
@@ -89,8 +89,8 @@ body{
 
 .nav__input{
     display: none;
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;;
 }
 
 .nav__list{
