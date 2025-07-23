@@ -43,12 +43,16 @@
                     class="nav__caption">
                     AM CAIPIN GT
             </figure>
-            <label class="nav__toggle">
+            <!-- <label class="nav__toggle">
                 <input 
                     type="checkbox" 
                     id="menu-input" 
                     class="nav__input">
-            </label>
+            </label> -->
+            <!-- Botón del menú -->
+            <button id="menu-toggle" class="nav__toggle" aria-label="Abrir menú">
+            <img src="./assets/icons/menu-open.svg" alt="Menú" class="nav__icon">
+            </button>
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="#" class="nav__link">Inicio</a>
@@ -80,5 +84,20 @@
             </ul>
         </div>
     </nav>
+    <script>
+        const toggleButton = document.getElementById('menu-toggle');
+        const navList = document.querySelector('.nav__list');
+        const navIcon = toggleButton.querySelector('img');
+
+        let menuOpen = false;
+
+        toggleButton.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            navList.style.transform = menuOpen ? 'translate(0)' : 'translate(-100%)';
+            navIcon.src = menuOpen
+            ? './assets/icons/menu-close.svg'
+            : './assets/icons/menu-open.svg';
+        });
+    </script>
 </body>
 </html>
