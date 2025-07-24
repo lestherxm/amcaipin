@@ -3,8 +3,9 @@
 .splide__track,
 .splide__list,
 .splide__slide {
+  position: relative;
+  margin-top: 25px;
   height: 100%;
-  max-height: 360px;
   z-index: 0;
 }
 
@@ -15,4 +16,6 @@
   object-fit: cover;
   object-position: center;
   display: block;
+  display: grid;
+  place-self: center;
 }
