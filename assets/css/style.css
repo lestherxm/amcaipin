@@ -87,6 +87,7 @@ body{
     padding: 1.5rem 5%;
     background-color: var(--secondary-color);
     transition: transform 0.5s;
+    z-index: 9;
 }
 
 .nav__link {
