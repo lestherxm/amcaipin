@@ -11,7 +11,7 @@
 .splide__slide {
   position: relative;
   overflow: hidden;
-  padding-top: 70px;
+  padding-top: 70px; /* REMOVE IF THE IMAGE DOESN'T REQUIRE IT*/
 }
 
 /* Imagen se adapta al contenedor y se centra */
@@ -23,7 +23,7 @@
   display: grid;
   place-self: center;
   filter: brightness(0.85); /* oscurece la imagen un poco */
-  transition: transform 1s ease-in-out, filter 0.5s ease; /* zoom más lento y suave */
+  transition: transform 2s ease-in-out, filter 0.5s ease; /* zoom más lento y suave */
 }
 
 /* Zoom al slide activo */
