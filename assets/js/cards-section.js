@@ -5,20 +5,21 @@ document.addEventListener('DOMContentLoaded', function () {
     splides.forEach(function(slider) {
         new Splide(slider, {
         type: 'loop',
-        perPage: 2,          // Número de tarjetas visibles en móviles
-        perMove: 1,
+        perPage: 1,          // Número de tarjetas visibles en móviles
         gap: '1rem',         // Espacio entre slides
-        //autoplay: true,
-        //interval: 3000,
-        pauseOnHover: false,
-        pauseOnFocus: false,
         arrows: false,        // flechas visibles
-        pagination: false,
+        drag: true,          // habilitar arrastre
+        pagination: false, // paginación visible
+        focus: 'center', // centrado del slide activo
         breakpoints: {
             764: { perPage: 2 },
             1024: { perPage: 3 },
             1230: { perPage: 4 },
-        },
+            1440: { perPage: 5 },
+            1920: { perPage: 6 },
+            2560: { perPage: 7},
+            3840: { perPage: 8 },
+            },
         }).mount();
     });
 });

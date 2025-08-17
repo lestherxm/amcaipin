@@ -1,12 +1,15 @@
 /* Sección */
 .section-cards {
-    width: min(90%, 1200px);
-    margin: 4rem auto;
+    width: min(100%, 1200px);
+    margin: 2rem auto;
+    padding: 8px 0;
+    scroll-margin-top: 80px; /* Espacio para el sticky header */
 }
 
 .section-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 2rem;
     color: var(--secondary-color);
 }
@@ -19,7 +22,11 @@
     gap: 0.5rem; /* separación entre elementos */
     padding: 1rem;
     border-radius: 8px;
+    width: 320px; /* ancho fijo para tarjetas */
+    user-select: none;
+    outline: none;
 }
+
 
 /* Imagen clickeable */
 .card__link {
@@ -29,26 +36,13 @@
     outline: none;
 }
 
-.card__link:focus,
-.card__link:hover {
-    outline: 2px solid var(--primary-color);
-    border-radius: 8px;
-}
-
 /* Imagen de la tarjeta */
 .card__img {
     width: 100%;
-    max-width: 200px; /* ancho máximo en móviles */
     height: auto;
     border-radius: 8px;
     object-fit: cover;
-    transition: transform 2s ease-in-out, filter 0.5s ease;
 }
-
-/* Zoom suave al slide activo */
-/* .splide__slide.is-active .card__img {
-    transform: scale(1.15);
-} */
 
 /* Título y subtítulo */
 .card__title {
