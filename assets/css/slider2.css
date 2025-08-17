@@ -1,0 +1,42 @@
+/* Asegura que todo el slider tenga altura completa */
+.splide,
+.splide__track,
+.splide__list,
+.splide__slide {
+  position: relative;
+  height: 100dvh;
+  z-index: 0;
+}
+
+.splide__slide {
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px; /* REMOVE IF THE IMAGE DOESN'T REQUIRE IT*/
+}
+
+/* Imagen se adapta al contenedor y se centra */
+.img-slider {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: grid;
+  place-self: center;
+  filter: brightness(0.85); /* oscurece la imagen un poco */
+  transition: transform 2s ease-in-out, filter 0.5s ease; /* zoom más lento y suave */
+}
+
+/* Zoom al slide activo */
+.splide__slide.is-active img {
+  transform: scale(1.2); /* ligero zoom al activarse */
+}
+
+/* Shadow interno elegante sobre el slide */
+.splide__slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.4); /* sombra interna suave */
+  pointer-events: none; /* no bloquea interacciones */
+  z-index: 1;
+}
