@@ -4,6 +4,33 @@
     margin: 2rem auto;
     padding: 8px 0;
     scroll-margin-top: 80px; /* Espacio para el sticky header */
+    /*REMOVE IF IT DOESN'T WORK*/
+    position: relative; /* necesario para posicionar los pseudo-elementos */
+    overflow: hidden; /* evita que los fades se salgan */
+}
+
+/* Fade izquierda */
+.section-cards::before,
+.section-cards::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;       /* ancho del fade */
+    height: 100%;
+    pointer-events: none; /* que no bloquee clics */
+    z-index: 2;
+}
+
+/* Fade izquierda */
+.section-cards::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Fade derecha */
+.section-cards::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .section-title {
@@ -62,4 +89,17 @@
 /* Espaciado entre slides */
 .cards-splide .splide__slide {
     padding: 0 0.5rem;
+}
+
+/* Estado inicial oculto */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px); /* empieza un poco abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado cuando aparece */
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
