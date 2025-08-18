@@ -51,12 +51,6 @@ body{
     margin-right: 8px;
 }
 
-.nav__caption{
-    color: var(--primary-color-soft);
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
 .nav__container{
     width: min(90%, 1200px);
     margin: 0 auto;

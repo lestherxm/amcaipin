@@ -11,7 +11,8 @@
 .main-slider__slide {
     position: relative;
     overflow: hidden;
-    padding-top: 70px; /* REMOVE IF THE IMAGE DOESN'T REQUIRE IT */
+    /* REMOVE IF THE IMAGE DOESN'T REQUIRE IT */
+    padding-top: 70px; 
 }
 
 /* Imagen se adapta al contenedor y se centra */
@@ -36,7 +37,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.4); /* sombra interna suave */
+    /* sombra interna suave 0.4 */
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.8);
     pointer-events: none; /* no bloquea interacciones */
     z-index: 1;
 }
