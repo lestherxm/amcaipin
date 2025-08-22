@@ -11,7 +11,7 @@
 .main-slider__slide {
     position: relative;
     overflow: hidden;
-    /* REMOVE IF THE IMAGE DOESN'T REQUIRE IT */
+    /* ajusta el padding extra que empuja la imagen hacia abajo */
     padding-top: 70px; 
 }
 
@@ -25,6 +25,13 @@
     place-self: center;
     filter: brightness(0.85); /* oscurece la imagen un poco */
     transition: transform 2s ease-in-out, filter 0.5s ease; /* zoom más lento y suave */
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 720px) {
+    .main-slider__slide {
+        padding-top: 0px; /* elimina el padding extra en pantallas grandes */
+    }
 }
 
 /* Zoom al slide activo */
