@@ -4,8 +4,7 @@
 .main-slider__list,
 .main-slider__slide {
     position: relative;
-    /* height: 100dvh; */
-    height: 100vh;
+    height: 100dvh;
     z-index: 0;
 }
 
