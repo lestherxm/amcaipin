@@ -37,12 +37,13 @@
     <meta property="og:image" content="https://lestherxm.github.io/og_images/logo-amcaipin-big.png">
 </head>
 <body>
-    <!-- CONFIG NAVIGATION CODE HERE -->
+    <!-- START: NAVIGATION BAR -->
     <nav class="nav">
         <div class="nav__container">
             <figure class="nav__figure">
                 <img    
                     src="./assets/images/logo-amcaipin-small.png" 
+                    loading="eager"
                     alt="Logo de AM CAIPIN GT"
                     title="Logo de AM CAIPIN GT" 
                     class="nav__logo"
@@ -50,44 +51,65 @@
                 >
             </figure>
             <button id="menu-toggle" class="nav__toggle" aria-label="Abrir menú">
-            <img src="./assets/icons/menu-open.svg" alt="Menú" class="nav__icon">
+                <img 
+                    src="./assets/icons/menu-open.svg"
+                    loading="eager" 
+                    alt="Toggle Menú" 
+                    class="nav__icon">
             </button>
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="#nuestras-marcas" class="nav__link">Nuestras Marcas</a>
                 </li>
-                <li class="nav__item">
-                    <a href="#seccion002" class="nav__link">seccion002</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#seccion003" class="nav__link">seccion003</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#seccion004" class="nav__link">seccion004</a>
-                </li>
             </ul>
         </div>
     </nav>
-    
-    <!-- CONFIG CARROUSEL CODE HERE -->
+    <!-- END: NAVIGATION BAR -->
+
+    <!-- START: SLIDER/CARROUSEL -->
     <section class="main-slider splide">
         <div class="main-slider__track splide__track">
             <ul class="main-slider__list splide__list">
+                <!-- IMAGEN 00 -->
                 <li class="main-slider__slide splide__slide">
-                    <img class="main-slider__img" alt="img-slider" src="./assets/images/slider/image-000.svg" loading="lazy">
+                    <img 
+                        class="main-slider__img" 
+                        alt="Nuevos Modelos de Gorras en AM CAIPING Guatemala." 
+                        src="./assets/images/slider/network/image-000.png" 
+                        loading="eager" 
+                        fetchpriority="high">
                 </li>
+                <!-- IMAGEN 01 -->
                 <li class="main-slider__slide splide__slide">
-                    <img class="main-slider__img" alt="img-slider" src="./assets/images/slider/image-001.svg" loading="lazy">
+                    <img 
+                        class="main-slider__img" 
+                        alt="Nuevos Modelos de Gorras en AM CAIPING Guatemala." 
+                        src="./assets/images/slider/network/image-001.png" 
+                        loading="eager"
+                        fetchpriority="high">
                 </li>
+                <!-- IMAGEN 02 -->
                 <li class="main-slider__slide splide__slide">
-                    <img class="main-slider__img" alt="img-slider" src="./assets/images/slider/image-002.svg" loading="lazy">
+                    <img 
+                        class="main-slider__img" 
+                        alt="img-slider" 
+                        src="./assets/images/slider/network/image-002.png" 
+                        loading="eager"
+                        fetchpriority="high">
                 </li>
+                <!-- IMAGEN 03 -->
                 <li class="main-slider__slide splide__slide">
-                    <img class="main-slider__img" alt="img-slider" src="./assets/images/slider/image-003.svg" loading="lazy">
+                    <img 
+                        class="main-slider__img" 
+                        alt="img-slider" 
+                        src="./assets/images/slider/network/image-003.png"  
+                        loading="eager"
+                        fetchpriority="high">
                 </li>
             </ul>
         </div>
     </section>
+    <!-- END: SLIDER/CARROUSEL -->
 
     <!-- SECCION GENERICA 1 -->
     <section class="section-cards reveal" aria-labelledby="section-titulo-1" id="nuestras-marcas">
