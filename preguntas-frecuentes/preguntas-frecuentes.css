@@ -1,0 +1,161 @@
+/* Estilos base */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #333;
+    }
+
+.faq-container {
+    max-width: 95%;
+    margin: 40px auto;
+    margin-top: 90px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* Estilo de las preguntas */
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    line-height: 1.4;
+    white-space: normal;
+}
+
+/* Flecha SVG */
+.arrow {
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-7-7h14z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s;
+}
+
+/* Rotación cuando está activa */
+.faq-question.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Estilo de las respuestas */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Media queries */
+@media (min-width: 600px) {
+    .faq-container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .faq-container {
+        max-width: 60%;
+    }
+}
+
+/* Bloques impares → fondo blanco */
+.faq-item:nth-child(odd) {
+    background-color: #ffffff;
+    border-radius: 6px;
+    margin-bottom: 10px; /* separa cada bloque */
+    overflow: hidden; /* para que los bordes redondeados incluyan la respuesta */
+}
+
+/* Bloques pares → fondo gris claro */
+.faq-item:nth-child(even) {
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/* El botón de pregunta y la respuesta ahora heredan el color de su bloque */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: transparent; /* quitar color propio para heredar del bloque */
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    line-height: 1.4;
+    white-space: normal;
+    }
+
+/* Respuestas */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #25D366; /* Verde oficial WhatsApp */
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.whatsapp-link:hover {
+    color: #128C7E; /* Verde oscuro de WhatsApp */
+    transform: scale(1.05);
+}
+
+.whatsapp-icon {
+    width: 18px;
+    height: 18px;
+}
