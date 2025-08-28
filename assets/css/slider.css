@@ -51,3 +51,21 @@
     pointer-events: none; /* no bloquea interacciones */
     z-index: 1;
 }
+
+/* Fix solo para iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    .main-slider__img {
+        /* Previene flash/blanco en loop */
+        will-change: transform;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
+
+    .main-slider,
+    .main-slider__track,
+    .main-slider__list,
+    .main-slider__slide {
+        /* Evita bug con 100dvh en iOS Safari */
+        height: calc(100vh - 80px);
+    }
+}
