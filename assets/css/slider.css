@@ -4,15 +4,17 @@
 .main-slider__list,
 .main-slider__slide {
     position: relative;
-    height: 100dvh;
+    height: calc(100dvh - 80px); /* altura completa menos la del nav y del scrolling text (50+30) */
     z-index: 0;
+}
+
+.main-slider{
+    margin-top: 80px;
 }
 
 .main-slider__slide {
     position: relative;
     overflow: hidden;
-    /* ajusta el padding extra que empuja la imagen hacia abajo */
-    padding-top: 70px; 
 }
 
 /* Imagen se adapta al contenedor y se centra */
@@ -23,7 +25,7 @@
     object-position: top;
     display: grid;
     place-self: center;
-    filter: brightness(0.85); /* oscurece la imagen un poco */
+    filter: brightness(0.75); /* oscurece la imagen un poco */
     transition: transform 2s ease-in-out, filter 0.5s ease; /* zoom más lento y suave */
 }
 

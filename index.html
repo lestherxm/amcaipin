@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <!-- GENERAL STYLES - MOBILE FIRST PATTERN -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- SCROLLING TEXT STYLES -->
+    <link rel="stylesheet" href="./assets/css/scrolling-text.css">
+    <!-- NAV BAR STYLES -->
+    <link rel="stylesheet" href="./assets/css/nav.css">
     <!-- STYLES FOR EACH SECTION OF THIS PAGE -->
     <link rel="stylesheet" href="./assets/css/cards-section.css">
     <!-- STYLES FOR SLIDESHOW - SHOW DIFFERENT PERSPECTIVE OF THE HATS -->
@@ -39,37 +43,50 @@
     <meta property="og:image" content="https://lestherxm.github.io/og_images/logo-amcaipin-big.png">
 </head>
 <body>
-    <!-- START: NAVIGATION BAR -->
-    <nav class="nav">
-        <div class="nav__container">
-            <figure class="nav__figure">
-                <img    
-                    src="./assets/images/logo-amcaipin-small.png" 
-                    loading="eager"
-                    alt="Logo de AM CAIPIN GT"
-                    title="Logo de AM CAIPIN GT" 
-                    class="nav__logo"
-                    width="40px"
-                >
-            </figure>
-            <button id="menu-toggle" class="nav__toggle" aria-label="Abrir menú">
-                <img 
-                    src="./assets/icons/menu-open.svg"
-                    loading="eager" 
-                    alt="Toggle Menú" 
-                    class="nav__icon">
-            </button>
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Inicio</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#nuestras-marcas" class="nav__link">Nuestras Marcas</a>
-                </li>
-            </ul>
+    
+    <header>
+        <!-- START: SCROLLING TEXT -->
+        <div class="scrolling-text">
+            <div class="scrolling-text__container">
+                <p class="scrolling-text__item" id="scrollingMessage">
+                    <!-- CARGA DE MENSAJES A TRAVES DE JS -->
+                </p>
+            </div>
         </div>
-    </nav>
-    <!-- END: NAVIGATION BAR -->
+        <!-- END: SCROLLING TEXT -->
+        
+        <!-- START: NAVIGATION BAR -->
+        <nav class="nav">
+            <div class="nav__container">
+                <figure class="nav__figure">
+                    <img    
+                        src="./assets/images/logo-amcaipin-small.png" 
+                        loading="eager"
+                        alt="Logo de AM CAIPIN GT"
+                        title="Logo de AM CAIPIN GT" 
+                        class="nav__logo"
+                        width="34px"
+                    >
+                </figure>
+                <button id="menu-toggle" class="nav__toggle" aria-label="Abrir menú" title="Abrir menú">
+                    <img 
+                        src="./assets/icons/menu-open.svg"
+                        loading="eager" 
+                        alt="Toggle Menú" 
+                        class="nav__icon">
+                </button>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#nuestras-marcas" class="nav__link">Nuestras Marcas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- END: NAVIGATION BAR -->
+    </header>
 
     <!-- START: SLIDER/CARROUSEL -->
     <section class="main-slider splide" id="inicio">
@@ -668,6 +685,8 @@
     </footer>
     <!-- END: FOOTER -->
 
+    <!-- SCROLLING TEXT -->
+    <script src="./assets/js/scrolling-text.js" defer></script>
     <!-- SLIDE.JS FOR CARROUSEL IMAGE -->
     <script src="./assets/js/carrousel-slide.js" defer></script>
     <!-- TOGGLE MENU BUTTON INTERACTION WITH JS -->
