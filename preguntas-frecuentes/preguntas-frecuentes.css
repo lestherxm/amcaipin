@@ -159,3 +159,13 @@ h1 {
     width: 18px;
     height: 18px;
 }
+
+/* Safari bug for telephone detection */
+.faq-question,
+.faq-question a,
+.faq-answer,
+.faq-answer a {
+    color: var(--primary-color-dark);
+    text-decoration: none;
+}
+
