@@ -3,80 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AM CAIPIN GT | Políticas de Cambio</title>
-    <!-- POLITICAS DE CAMBIO ESTILOS -->
-    <link rel="stylesheet" href="politicas-de-cambio.css">
+    <title>AM CAIPIN GT | Términos y condiciones.</title>
     <!-- NORMALIZE - FIX TROUBLES THROUGH DIFFERENT BROWSERS AND DEVICES -->
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <!-- GENERAL STYLES - MOBILE FIRST PATTERN -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- SCROLLING TEXT STYLES -->
-    <link rel="stylesheet" href="./assets/css/scrolling-text.css">
-    <!-- NAV BAR STYLES -->
-    <link rel="stylesheet" href="./assets/css/nav.css">
     <!-- STYLES FOR THE FOOTER -->
     <link rel="stylesheet" href="./assets/css/footer.css">
+    <!-- POLITICAS DE CAMBIO ESTILOS -->
+    <link rel="stylesheet" href="politicas-de-cambio.css">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <!-- CEO TAGS FOR SEARCH ENGINES -->
     <link rel="icon" type="image/x-icon" href="./assets/icons/logo.ico">
-    <meta property="og:title" content="AM CAIPIN GT | Políticas de Cambio">
-    <meta property="og:description" content="En AM CAIPIN nos esforzamos por ofrecerte productos de calidad y un servicio responsable. Para garantizar transparencia, ponemos a tu disposición políticas de cambio, reembolsos y devoluciones.">
-    <meta name="description" content="En AM CAIPIN nos esforzamos por ofrecerte productos de calidad y un servicio responsable. Para garantizar transparencia, ponemos a tu disposición políticas de cambio, reembolsos y devoluciones.">
-    <meta property="og:url" content="https://amcaipin.com/politicas-de-cambio">
-    <link rel="canonical" href="https://amcaipin.com/politicas-de-cambio">
-    <meta name="keywords" content="politicas de cambio am caipin, am caipin gt, am caipin, amcaipin, amcaipin.com, amcaipin gt, gorras jc hats, jc hats guatemala">
+    <meta property="og:title" content="AM CAIPIN GT | Términos y condiciones.">
+    <meta property="og:description" content="">
+    <meta name="description" content="">
+    <meta property="og:url" content="https://amcaipin.com">
+    <link rel="canonical" href="https://amcaipin.com">
+    <meta name="keywords" content="terminos y condiciones, am caipin gt, am caipin, amcaipin, amcaipin.com, amcaipin gt, gorras jc hats, jc hats guatemala">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://lestherxm.github.io/og_images/logo-amcaipin-big.png">
 </head>
 <body>
-    <!-- START: HEADER WITH NAV, LOGO AND SCROLLING TEXT -->
-    <header>
-        <!-- START: SCROLLING TEXT -->
-        <div class="scrolling-text">
-            <div class="scrolling-text__container">
-                <p class="scrolling-text__item" id="scrollingMessage">
-                    <!-- CARGA DE MENSAJES A TRAVES DE JS -->
-                </p>
-            </div>
+    <!-- START: NAVIGATION BAR -->
+    <nav class="nav">
+        <div class="nav__container">
+            <figure class="nav__figure">
+                <img    
+                    src="./assets/images/logo-amcaipin-small.png" 
+                    loading="eager"
+                    alt="Logo de AM CAIPIN GT"
+                    title="Logo de AM CAIPIN GT" 
+                    class="nav__logo"
+                    width="40px"
+                >
+            </figure>
+            <button id="menu-toggle" class="nav__toggle" aria-label="Abrir menú">
+                <img 
+                    src="./assets/icons/menu-open.svg"
+                    loading="eager" 
+                    alt="Toggle Menú" 
+                    class="nav__icon">
+            </button>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="../index.html#" class="nav__link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../index.html#nuestras-marcas" class="nav__link">Nuestras Marcas</a>
+                </li>
+            </ul>
         </div>
-        <!-- END: SCROLLING TEXT -->
-        
-        <!-- START: NAVIGATION BAR -->
-        <nav class="nav">
-            <div class="nav__container">
-                <figure class="nav__figure">
-                    <img    
-                        src="./assets/images/logo-amcaipin-small.png" 
-                        loading="eager"
-                        alt="Logo de AM CAIPIN GT"
-                        title="Logo de AM CAIPIN GT" 
-                        class="nav__logo"
-                        width="34px"
-                    >
-                </figure>
-                <button id="menu-toggle" class="nav__toggle" aria-label="Abrir menú" title="Abrir menú">
-                    <img 
-                        src="./assets/icons/menu-open.svg"
-                        loading="eager" 
-                        alt="Toggle Menú" 
-                        class="nav__icon">
-                </button>
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Inicio</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#nuestras-marcas" class="nav__link">Nuestras Marcas</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- END: NAVIGATION BAR -->
-    </header>
-    <!-- END: HEADER WITH NAV, LOGO AND SCROLLING TEXT -->
+    </nav>
+    <!-- END: NAVIGATION BAR -->
 
     <!-- START: TERMS AND CONDITIONS SECTION -->
     <main class="container">
@@ -169,11 +151,11 @@
     </footer>
     <!-- END: FOOTER -->
 
-    <!-- SCROLLING TEXT -->
-    <script src="./assets/js/scrolling-text.js" defer></script>
     <!-- TOGGLE MENU BUTTON INTERACTION WITH JS -->
     <script src="./assets/js/toggleMenuButton.js" defer></script>
     <!-- SCRIPT.JS TO HIDE MENU WHEN CLICKING A LINK -->
     <script src="./assets/js/closeMenuOnLinkClick.js" defer></script>
+    <!-- REVEAL SECTIONS JS -->
+    <script src="./assets/js/reveal-sections.js" defer></script>
 </body>
 </html>
