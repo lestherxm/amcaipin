@@ -1,0 +1,71 @@
+/* Asegura que todo el slider tenga altura completa */
+.main-slider,
+.main-slider__track,
+.main-slider__list,
+.main-slider__slide {
+    position: relative;
+    height: calc(100dvh - 80px); /* altura completa menos la del nav y del scrolling text (50+30) */
+    z-index: 0;
+}
+
+.main-slider{
+    margin-top: 80px;
+}
+
+.main-slider__slide {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen se adapta al contenedor y se centra */
+.main-slider__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: grid;
+    place-self: center;
+    filter: brightness(0.75); /* oscurece la imagen un poco */
+    transition: transform 2s ease-in-out, filter 0.5s ease; /* zoom más lento y suave */
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 720px) {
+    .main-slider__slide {
+        padding-top: 0px; /* elimina el padding extra en pantallas grandes */
+    }
+}
+
+/* Zoom al slide activo */
+.main-slider__slide.is-active .main-slider__img {
+    transform: scale(1.2); /* ligero zoom al activarse */
+}
+
+/* Shadow interno elegante sobre el slide */
+.main-slider__slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* sombra interna suave 0.4 */
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.8);
+    pointer-events: none; /* no bloquea interacciones */
+    z-index: 1;
+}
+
+/* Fix solo para iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    .main-slider__img {
+        /* Previene flash/blanco en loop */
+        will-change: transform;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
+
+    .main-slider,
+    .main-slider__track,
+    .main-slider__list,
+    .main-slider__slide {
+        /* Evita bug con 100dvh en iOS Safari */
+        height: calc(100vh - 80px);
+    }
+}

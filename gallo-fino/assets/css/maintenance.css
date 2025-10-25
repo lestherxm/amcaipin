@@ -1,0 +1,71 @@
+/* ==============================
+    ESTILOS PARA PÁGINA DE MANTENIMIENTO
+   ============================== */
+
+/* Contenedor principal */
+.maintenance-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Título principal */
+.maintenance-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+/* Imagen */
+.maintenance-image {
+    max-width: 280px;
+    width: 90%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Mensaje */
+.maintenance-message {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+/* ==============================
+    RESPONSIVE DESIGN
+   ============================== */
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 768px) {
+    .maintenance-title {
+        font-size: 3rem;
+    }
+
+    .maintenance-message {
+        font-size: 1.25rem;
+    }
+}
+
+/* Pantallas grandes (desktop) */
+@media (min-width: 1024px) {
+    .maintenance-container {
+        min-height: 100vh;
+    }
+
+    .maintenance-title {
+        font-size: 3.5rem;
+    }
+
+    .maintenance-image {
+        max-width: 320px;
+    }
+}

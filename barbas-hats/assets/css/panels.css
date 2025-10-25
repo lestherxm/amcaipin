@@ -1,0 +1,53 @@
+/* Contenedor del panel */
+.custom-panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* Limitamos ancho en pantallas grandes */
+.panelSplide {
+    width: 100%;
+    max-width: 800px; /* ancho máximo en escritorio */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 12px; */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Ajuste de imágenes */
+.panelSplide img {
+    width: 100%;
+    height: 50vh; /* Ocupa al menos 50% de la altura visible */
+    min-height: 350px;
+    max-height: 800px;
+    object-fit: cover;
+    display: block;
+}
+
+/* En pantallas grandes, ajusta a proporción más elegante */
+@media (min-width: 768px) {
+    .panelSplide img {
+        height: 60vh; /* más alto en tablets/desktop */
+        max-height: 600px; /* límite para que no se estire demasiado */
+    }
+}
+
+/* Barra de progreso */
+.custom-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.3);
+}
+
+.custom-progress-bar {
+    width: 0;
+    height: 100%;
+    background: var(--primary-color);
+    transition: width linear;
+}

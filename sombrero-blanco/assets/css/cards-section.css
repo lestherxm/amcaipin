@@ -1,0 +1,104 @@
+/* Sección */
+.section-cards {
+    width: min(100%, 1200px);
+    margin: 2rem auto;
+    padding: 8px 0;
+    scroll-margin-top: 80px; /* Espacio para el sticky header */
+    /*REMOVE IF IT DOESN'T WORK*/
+    position: relative; /* necesario para posicionar los pseudo-elementos */
+    overflow: hidden; /* evita que los fades se salgan */
+}
+
+/* Fade izquierda */
+.section-cards::before,
+.section-cards::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;       /* ancho del fade */
+    height: 100%;
+    pointer-events: none; /* que no bloquee clics */
+    z-index: 2;
+}
+
+/* Fade izquierda */
+.section-cards::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Fade derecha */
+.section-cards::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+/* Tarjetas dentro del carrusel */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* separación entre elementos */
+    padding: 1rem;
+    border-radius: 8px;
+    width: 320px; /* ancho fijo para tarjetas */
+    user-select: none;
+    outline: none;
+}
+
+/* Imagen clickeable */
+.card__link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Imagen de la tarjeta */
+.card__img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Título y subtítulo */
+.card__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.card__subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--secondary-color-soft);
+    text-align: center;
+}
+
+/* Espaciado entre slides */
+.cards-splide .splide__slide {
+    padding: 0 0.5rem;
+}
+
+/* Estado inicial oculto */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px); /* empieza un poco abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado cuando aparece */
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
