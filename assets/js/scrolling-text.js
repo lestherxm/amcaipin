@@ -1,7 +1,7 @@
 const messages = [
-    "¡Envío gratis a toda Guatemala!",
-    "Compra hoy y recibe un descuento exclusivo!",
-    "Nuevas gorras disponibles esta semana!"
+    "¡Envío GRATIS a toda Guatemala!",
+    "¡Compra hoy y recibe un DESCUENTO especial!",
+    "¡Preventa de gorras exclusivas al MEJOR precio!"
 ];
 
 const messageEl = document.getElementById("scrollingMessage");
