@@ -41,7 +41,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 4px;
     background: rgba(255,255,255,0.3);
 }
 
@@ -50,4 +50,9 @@
     height: 100%;
     background: var(--primary-color);
     transition: width linear;
+}
+
+/* Corrige el desplazamiento al usar anclas con un nav fijo */
+#nuestro-trabajo {
+    scroll-margin-top: 80px; 
 }
