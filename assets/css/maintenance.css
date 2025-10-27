@@ -57,9 +57,6 @@
 
 /* Pantallas grandes (desktop) */
 @media (min-width: 1024px) {
-    .maintenance-container {
-        min-height: 100vh;
-    }
 
     .maintenance-title {
         font-size: 3.5rem;

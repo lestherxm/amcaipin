@@ -1,0 +1,119 @@
+/* ================================
+    GALERÍA DE GORRAS (MOBILE FIRST)
+   ================================ */
+.hats-container {
+    padding: 1rem;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 80px; /* Ajusta según altura del header */;
+}
+
+.hats-tittle {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.underline-tittle {
+    width: 100%;
+    height: 2px;
+    /* background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.6), rgba(0,0,0,0.1)); */
+    background: linear-gradient(to right, var(--primary-color-soft), var(--primary-color), var(--primary-color-soft));
+    border: none;
+    border-radius: 1px;
+    margin: 0 auto 2rem auto;
+    max-width: 95%; /* opcional: deja un pequeño margen lateral */
+}
+
+/* --- Galería --- */
+.hats-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
+    gap: 0.8rem;
+    overflow-y: auto; /* Scroll vertical si hay muchas gorras */
+    padding-bottom: 1rem;
+    min-height: calc(100vh - 172px);
+    max-height: calc(100vh - 172px);
+}
+
+.hat-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    max-height: 240px;
+    min-width: 100px;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #fff;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.hat-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.3), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.hat-item:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12),
+        0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hat-item:hover::before {
+    opacity: 1;
+}
+
+.hat-item img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.hat-item:hover img {
+    transform: scale(1.1);
+}
+
+/* --- Scroll más limpio --- */
+.hats-gallery::-webkit-scrollbar {
+    width: 6px;
+}
+
+.hats-gallery::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+/* --- Tablets --- */
+@media (min-width: 600px) {
+    .hats-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* --- Desktop --- */
+@media (min-width: 900px) {
+    .hats-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.4rem;
+        max-height: none; /* Sin límite de altura */
+    }
+}
