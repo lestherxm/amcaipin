@@ -2,8 +2,9 @@
 .custom-panel {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 0 auto;
 }
 
 /* Limitamos ancho en pantallas grandes */
@@ -20,7 +21,7 @@
 /* Ajuste de imágenes */
 .panelSplide img {
     width: 100%;
-    height: 50vh; /* Ocupa al menos 50% de la altura visible */
+    height: 50vh; 
     min-height: 350px;
     max-height: 800px;
     object-fit: cover;

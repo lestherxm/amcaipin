@@ -1,7 +1,7 @@
 /* Sección */
 .section-cards {
     width: min(100%, 1200px);
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 8px 0;
     scroll-margin-top: 80px; /* Espacio para el sticky header */
     /*REMOVE IF IT DOESN'T WORK*/
@@ -37,7 +37,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: var(--secondary-color);
 }
 

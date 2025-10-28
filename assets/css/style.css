@@ -44,3 +44,11 @@ header{
     margin: 0 auto 2rem auto;
     max-width: 95%; /* Deja un pequeño margen lateral */
 }
+
+.webpage-part{
+    min-height: 40dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 2rem 0;
+}
