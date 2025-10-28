@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         new Splide(slider, {
         type: 'loop',
         perPage: 1,          // Número de tarjetas visibles en móviles
+        perMove: 1,         // Número de tarjetas que se mueven por vez
         gap: '1rem',         // Espacio entre slides
         arrows: false,        // flechas visibles
         drag: true,          // habilitar arrastre
