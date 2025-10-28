@@ -4,15 +4,16 @@
 
 /* Contenedor principal */
 .maintenance-container {
-    min-height: 100vh;
+    min-height: calc(100dvh - 80px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
     padding: 2rem 1rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #f9f9f9;
+    margin-top: 80px; /* space of the steacky header */
 }
 
 /* Título principal */
