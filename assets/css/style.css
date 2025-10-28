@@ -52,3 +52,16 @@ header{
     justify-content: start;
     padding: 2rem 0;
 }
+
+/* Estado inicial oculto */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px); /* empieza un poco abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado cuando aparece */
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

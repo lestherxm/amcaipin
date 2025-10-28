@@ -89,16 +89,3 @@
 .cards-splide .splide__slide {
     padding: 0 0.5rem;
 }
-
-/* Estado inicial oculto */
-.reveal {
-    opacity: 0;
-    transform: translateY(50px); /* empieza un poco abajo */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Estado cuando aparece */
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
