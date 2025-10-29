@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    scroll-margin-top: 80px; /* Espacio para el sticky header */
 }
 
 /* Limitamos ancho en pantallas grandes */
@@ -59,9 +60,4 @@
     height: 100%;
     background: var(--primary-color);
     transition: width linear;
-}
-
-/* Corrige el desplazamiento al usar anclas con un nav fijo */
-#nuestro-trabajo {
-    scroll-margin-top: 80px; 
 }

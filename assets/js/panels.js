@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const splide = new Splide(panel, {
             type: "loop",
             autoplay: true,
-            interval: 5000,
+            interval: 8000,
             pauseOnHover: false,
             arrows: false,
             pagination: false,
