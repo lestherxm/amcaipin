@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
     <!-- BRANDS -->
     <link rel="stylesheet" href="./assets/css/logo-brands.css">
+    <!-- CUBO GORRA DE EXHIBICION -->
+    <link rel="stylesheet" href="./assets/css/cubo.css">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,8 +153,10 @@
 
     <!-- START SECTION: NUESTRAS MARCAS -->
     <section class="section-cards webpage-part" aria-labelledby="nuestras-marcas" id="nuestras-marcas">
-        <h2 id="nuestras-marcas-title" class="section-title">NUESTRAS MARCAS</h2>
-        <hr class="underline-tittle reveal">
+        <div>
+            <h2 id="nuestras-marcas-title" class="section-title">NUESTRAS MARCAS</h2>
+            <hr class="underline-tittle reveal">
+        </div>
         <div class="splide cards-splide reveal" aria-label="Nuestras Marcas - AM CAIPIN GT">
             <div class="splide__track">
                 <ul class="splide__list">
@@ -353,14 +357,20 @@
                 </ul>
             </div>
         </div>
+        <!-- START COMPLEMENTARY CONTENT: GORRA DE EXHIBICION -->
+        <div class="cubo-container">
+            <div class="cubo" id="cubo">
+            <div class="cara frente"></div>
+            <div class="cara atras"></div>
+            <div class="cara derecha"></div>
+            <div class="cara izquierda"></div>
+            <div class="cara arriba"></div>
+            <div class="cara abajo"></div>
+            </div>
+        </div>
+        <!-- START COMPLEMENTARY CONTENT: GORRA DE EXHIBICION -->
     </section>
     <!-- END SECTION: NUESTRAS MARCAS -->
-
-    <!-- START COMPLEMENTARY CONTENT: GORRA DE EXHIBICION -->
-    <div class="complementary-content">
-
-    </div>
-    <!-- START COMPLEMENTARY CONTENT: GORRA DE EXHIBICION -->
 
     <!-- START PANEL: NUESTRO TRABAJO -->
     <div class="custom-panel webpage-part" aria-labelledby="nuestro-trabajo-tittle" id="nuestro-trabajo">
@@ -531,5 +541,7 @@
     <script src="./assets/js/reveal-sections.js" defer></script>
     <!-- PANELS SECTION JS -->
     <script src="./assets/js/panels.js" defer></script>
+    <!-- CUBO - GORRA DE EXHIBICION -->
+    <script src="./assets/js/cube.js"></script>
 </body>
 </html>

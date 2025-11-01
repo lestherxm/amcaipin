@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         perPage: 1,          // Número de tarjetas visibles en móviles
         perMove: 1,         // Número de tarjetas que se mueven por vez
         gap: '1rem',         // Espacio entre slides
-        arrows: false,        // flechas visibles
+        arrows: true,        // flechas visibles
         drag: true,          // habilitar arrastre
         pagination: false, // paginación visible
         focus: 'center', // centrado del slide activo

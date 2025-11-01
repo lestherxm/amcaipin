@@ -1,0 +1,62 @@
+/* Contenedor con perspectiva */
+.cubo-container {
+    perspective: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estructura del cubo */
+.cubo {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-15deg) rotateY(20deg);
+    transition: transform 0.2s ease-out;
+}
+
+/* Caras del cubo */
+.cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Cada cara con su imagen */
+.frente {
+    transform: translateZ(140px);
+    background-image: url('../images/cube/gorra1.webp');
+}
+
+.atras {
+    transform: rotateY(180deg) translateZ(140px);
+    background-image: url('../images/cube/gorra4.webp');
+}
+
+.derecha {
+    transform: rotateY(90deg) translateZ(140px);
+    background-image: url('../images/cube/gorra2.webp');
+}
+
+.izquierda {
+    transform: rotateY(-90deg) translateZ(140px);
+    background-image: url('../images/cube/gorra2.webp');
+}
+
+.arriba {
+    transform: rotateX(90deg) translateZ(140px);
+    background-image: url('../images/cube/gorra3.webp');
+}
+
+.abajo {
+    transform: rotateX(-90deg) translateZ(140px);
+    background-image: url('../images/cube/gorra3.webp');
+}
