@@ -1,12 +1,18 @@
 /* Contenedor con perspectiva */
 .cubo-container {
-    perspective: 1800px;
+    margin-top: 80px;
+    perspective: 2200px;
     width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 600px) {
+    .cubo-container {
+        margin: 80px auto;
+    }
 }
 
 /* Estructura del cubo */
@@ -53,7 +59,7 @@
 
 .arriba {
     transform: rotateX(90deg) translateZ(140px);
-    background-image: url('../images/cube/gorra3.webp');
+    background-image: url('../images/logo-amcaipin-big.png');
 }
 
 .abajo {
