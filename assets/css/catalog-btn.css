@@ -1,0 +1,31 @@
+.catalog-btn-container{
+    /* border: 4px solid green; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.catalog-btn {
+    text-decoration: none;
+    background-color: var(--primary-color);     /* Verde azulado del logo */
+    color: #FFFFFF;                /* Texto blanco */
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.catalog-btn:hover {
+    background-color: #6D9A93;     /* Un tono más claro para hover */
+    transform: translateY(-2px);
+}
+
+.catalog-btn:active {
+    transform: scale(0.96);
+}
