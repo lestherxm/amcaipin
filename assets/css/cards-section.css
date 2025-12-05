@@ -51,7 +51,7 @@
     border-radius: 8px;
     /* ancho fijo para tarjetas */
     /* width: 320px; */
-    width: 220px !important;
+    width: 250px !important;
     user-select: none;
     outline: none;
 }
