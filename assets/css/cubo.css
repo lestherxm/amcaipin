@@ -70,7 +70,7 @@
 .cubo-container {
     perspective: 1800px;
     width: 70%;
-    max-width: 170px;
+    max-width: var(--cubo-size);
     display: flex;
     justify-content: center;
     margin: 30px auto 60px auto;
@@ -133,6 +133,11 @@
     :root {
         --cubo-size: 160px;   /* Más pequeño en móviles */
     }
+
+    .cubo-container {
+        max-width: 160px; /* Igual que el cubo */
+    }
+    
 }
 
 /* 📲 Tablets */
