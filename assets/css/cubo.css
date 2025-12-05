@@ -1,4 +1,4 @@
-/* Contenedor con perspectiva */
+/* 
 .cubo-container {
     perspective: 1800px;
     width: 70%;
@@ -11,10 +11,75 @@
     margin-bottom: 60px;
 }
 
+.cubo {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-15deg) rotateY(20deg);
+    transition: transform 0.2s ease-out;
+}
+
+.cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente {
+    transform: translateZ(100px);
+    background-image: url('../images/cube/gorra1.webp');
+}
+
+.atras {
+    transform: rotateY(180deg) translateZ(100px);
+    background-image: url('../images/cube/gorra4.webp');
+}
+
+.derecha {
+    transform: rotateY(90deg) translateZ(100px);
+    background-image: url('../images/cube/gorra2.webp');
+}
+
+.izquierda {
+    transform: rotateY(-90deg) translateZ(100px);
+    background-image: url('../images/cube/gorra2.webp');
+}
+
+.arriba {
+    transform: rotateX(90deg) translateZ(100px);
+    background-image: url('../images/logo-amcaipin-big.png');
+}
+
+.abajo {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-image: url('../images/cube/gorra3.webp');
+} */
+
+/* Tamaños base del cubo usando variables */
+:root {
+    --cubo-size: 200px;
+    --cubo-half: calc(var(--cubo-size) / 2);
+}
+
+/* Contenedor con perspectiva */
+.cubo-container {
+    perspective: 1800px;
+    width: 70%;
+    max-width: 170px;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 60px auto;
+}
+
 /* Estructura del cubo */
 .cubo {
-    width: 250px;
-    height: 250px;
+    width: var(--cubo-size);
+    height: var(--cubo-size);
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(-15deg) rotateY(20deg);
@@ -32,33 +97,61 @@
     background-position: center;
 }
 
-/* Cada cara con su imagen */
+/* Cada cara con su imagen y profundidad dinámica */
 .frente {
-    transform: translateZ(125px);
+    transform: translateZ(var(--cubo-half));
     background-image: url('../images/cube/gorra1.webp');
 }
 
 .atras {
-    transform: rotateY(180deg) translateZ(125px);
+    transform: rotateY(180deg) translateZ(var(--cubo-half));
     background-image: url('../images/cube/gorra4.webp');
 }
 
 .derecha {
-    transform: rotateY(90deg) translateZ(125px);
+    transform: rotateY(90deg) translateZ(var(--cubo-half));
     background-image: url('../images/cube/gorra2.webp');
 }
 
 .izquierda {
-    transform: rotateY(-90deg) translateZ(125px);
+    transform: rotateY(-90deg) translateZ(var(--cubo-half));
     background-image: url('../images/cube/gorra2.webp');
 }
 
 .arriba {
-    transform: rotateX(90deg) translateZ(125px);
+    transform: rotateX(90deg) translateZ(var(--cubo-half));
     background-image: url('../images/logo-amcaipin-big.png');
 }
 
 .abajo {
-    transform: rotateX(-90deg) translateZ(125px);
+    transform: rotateX(-90deg) translateZ(var(--cubo-half));
     background-image: url('../images/cube/gorra3.webp');
+}
+
+/* 📱 Móvil */
+@media (max-width: 480px) {
+    :root {
+        --cubo-size: 160px;   /* Más pequeño en móviles */
+    }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    :root {
+        --cubo-size: 200px;
+    }
+}
+
+/* 🖥 Desktop */
+@media (min-width: 769px) and (max-width: 1200px) {
+    :root {
+        --cubo-size: 260px;   /* Más grande */
+    }
+}
+
+/* 🖥💎 Pantallas grandes */
+@media (min-width: 1201px) {
+    :root {
+        --cubo-size: 320px;   /* Grande y vistoso */
+    }
 }
