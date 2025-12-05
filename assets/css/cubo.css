@@ -13,8 +13,8 @@
 
 /* Estructura del cubo */
 .cubo {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(-15deg) rotateY(20deg);
@@ -27,38 +27,38 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
     background-size: cover;
     background-position: center;
 }
 
 /* Cada cara con su imagen */
 .frente {
-    transform: translateZ(140px);
+    transform: translateZ(125px);
     background-image: url('../images/cube/gorra1.webp');
 }
 
 .atras {
-    transform: rotateY(180deg) translateZ(140px);
+    transform: rotateY(180deg) translateZ(125px);
     background-image: url('../images/cube/gorra4.webp');
 }
 
 .derecha {
-    transform: rotateY(90deg) translateZ(140px);
+    transform: rotateY(90deg) translateZ(125px);
     background-image: url('../images/cube/gorra2.webp');
 }
 
 .izquierda {
-    transform: rotateY(-90deg) translateZ(140px);
+    transform: rotateY(-90deg) translateZ(125px);
     background-image: url('../images/cube/gorra2.webp');
 }
 
 .arriba {
-    transform: rotateX(90deg) translateZ(140px);
+    transform: rotateX(90deg) translateZ(125px);
     background-image: url('../images/logo-amcaipin-big.png');
 }
 
 .abajo {
-    transform: rotateX(-90deg) translateZ(140px);
+    transform: rotateX(-90deg) translateZ(125px);
     background-image: url('../images/cube/gorra3.webp');
 }
