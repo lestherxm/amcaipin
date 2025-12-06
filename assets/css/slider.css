@@ -10,6 +10,7 @@
 
 .main-slider{
     margin-top: 80px;
+    scroll-margin-top: 80px; /* para anclar bien al hacer scroll */
 }
 
 /* Sombra ligera interna del carrousel */

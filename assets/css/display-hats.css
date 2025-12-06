@@ -8,16 +8,6 @@
     margin-top: 80px; /* Ajusta según altura del header */;
 }
 
-.hats-tittle {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #111;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 0.8rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
 /* --- GALERIA DE GORRAS--- */
 .hats-gallery {
     display: grid;
@@ -90,6 +80,44 @@
 .hats-gallery::-webkit-scrollbar-thumb {
     background-color: #ccc;
     border-radius: 10px;
+}
+
+/* BACK BTN */
+.header-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--primary-color-soft);
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: var(--primary-color-dark);
+    transition: background 0.2s ease, transform 0.1s ease;
+    margin-bottom: 22px;
+}
+
+.back-btn:hover {
+    background: var(--primary-color);
+    transform: translateX(-2px);
+}
+
+.back-icon {
+    font-size: 1.1rem;
+}
+
+.hats-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
 }
 
 /* --- Tablets --- */

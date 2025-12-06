@@ -81,9 +81,16 @@
 
     <!-- START: GALLERY HATS -->
     <main class="hats-container">
-        <h1 class="hats-tittle">BARBAS HATS</h1>
-        <hr class="underline-tittle">
-        <section class="hats-gallery">
+        <!-- <h1 class="hats-tittle">BARBAS HATS</h1>
+        <hr class="underline-tittle"> -->
+        <div class="header-row reveal">
+            <a href="../#marcas" class="back-btn" aria-label="Regresar a la página anterior">
+                <span class="back-icon">←</span> Regresar
+            </a>
+            <h1 class="hats-title">BARBAS HATS</h1>
+        </div>
+        <hr class="underline-title reveal">
+        <section class="hats-gallery reveal">
             <!-- BARBAS HATS 01 -->
             <a class="hat-item">
                 <img src="./01/barbas-hats_01.1.png" alt="Gorra Barbas Hats Modelo 1" loading="lazy">
@@ -156,5 +163,7 @@
     <script src="../assets/js/toggleMenuButton.js" defer></script>
     <!-- SCRIPT.JS TO HIDE MENU WHEN CLICKING A LINK -->
     <script src="../assets/js/closeMenuOnLinkClick.js" defer></script>
+    <!-- REVEAL FEATURE -->
+    <script src="../assets/js/reveal-sections.js"></script>
 </body>
 </html>

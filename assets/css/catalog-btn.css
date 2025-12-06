@@ -1,5 +1,5 @@
 .catalog-btn-container{
-    /* border: 4px solid green; */
+    scroll-margin-top: 110px; /* Altura del header para que no quede oculto al hacer scroll */
     width: 100%;
     display: flex;
     justify-content: center;
