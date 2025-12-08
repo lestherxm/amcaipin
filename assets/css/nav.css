@@ -5,7 +5,7 @@
     top: 30px; /* leave space based on scrolling text height */
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 101;
 }
 
 /* display styles for logo and burguer menu */
