@@ -1,0 +1,65 @@
+/* --- ESTILO DEL BOTÓN FLOTANTE DE MÚSICA (UNIFICADO) --- */
+.music-btn {
+    position: fixed;
+    bottom: 100px; /* Separado del botón de WhatsApp */
+    right: 20px;
+    width: 60px;     /* Igual que WhatsApp */
+    height: 60px;    /* Igual que WhatsApp */
+    border-radius: 50%;
+    /* background: #25d366; */
+    background: var(--primary-color-dark);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;  /* Leve aumento para proporcionalidad */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Igual que WhatsApp */
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 9999;
+    overflow: visible;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    /* background: #1ebe5d; */
+    background: var(--primary-color);
+}
+
+/* --- ONDAS DE ANIMACIÓN (AJUSTADAS AL NUEVO TAMAÑO) --- */
+.wave {
+    position: absolute;
+    width: 60px;   /* Igual al botón */
+    height: 60px;  /* Igual al botón */
+    border-radius: 50%;
+    border: 2px solid rgba(37, 211, 102, 0.6);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wave1 {
+    animation: pulse 2s infinite;
+}
+
+.wave2 {
+    animation: pulse 2s infinite;
+    animation-delay: 1s;
+}
+
+.music-btn.paused .wave {
+    display: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}

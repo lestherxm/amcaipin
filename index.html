@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="./assets/css/catalog-btn.css">
     <!-- BTN WHATSAPP -->
     <link rel="stylesheet" href="./assets/css/whatsapp-float.css">
+    <!-- BTN BG SONG -->
+    <link rel="stylesheet" href="./assets/css/bg-song.css">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -421,6 +423,18 @@
     </a>
     <!-- END: WHATSAPP BUTTON -->
 
+    <!-- AUDIO DE FONDO -->
+    <audio id="bg-music" loop>
+        <source src="./assets/bg-song/inicio.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- BOTÓN FLOTANTE DE MÚSICA -->
+    <button id="musicToggle" class="music-btn">
+        <span class="icon">🔇</span>
+        <span class="wave wave1"></span>
+        <span class="wave wave2"></span>
+    </button>
+
     <!-- SCROLLING TEXT -->
     <script src="./assets/js/scrolling-text.js" defer></script>
     <!-- SLIDE.JS FOR CARROUSEL IMAGE -->
@@ -437,5 +451,7 @@
     <script src="./assets/js/panels.js" defer></script>
     <!-- CUBO - GORRA DE EXHIBICION -->
     <script src="./assets/js/cube.js"></script>
+    <!-- BG SONG -->
+    <script src="./assets/js/bg-song.js" defer></script>
 </body>
 </html>
