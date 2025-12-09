@@ -6,7 +6,6 @@
     width: 60px;     /* Igual que WhatsApp */
     height: 60px;    /* Igual que WhatsApp */
     border-radius: 50%;
-    /* background: #25d366; */
     background: var(--primary-color-dark);
     color: white;
     display: flex;
@@ -17,13 +16,11 @@
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Igual que WhatsApp */
     transition: transform 0.3s ease, background 0.3s ease;
-    z-index: 9999;
+    z-index: 100;
     overflow: visible;
 }
 
 .music-btn:hover {
-    transform: scale(1.1);
-    /* background: #1ebe5d; */
     background: var(--primary-color);
 }
 

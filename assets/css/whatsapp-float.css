@@ -4,7 +4,7 @@
     height: 60px;
     bottom: 20px;
     right: 20px;
-    background-color: #25d366;
+    background-color: var(--primary-color-dark);
     color: #fff;
     border-radius: 50%;
     text-align: center;
@@ -17,9 +17,9 @@
 }
 
 .whatsapp-float img {
-    width: 90%;
+    width: 28px; /*Igual al emoji del bg-song */
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
+    background: var(--primary-color);
 }
