@@ -14,7 +14,7 @@
     font-size: 28px;  /* Leve aumento para proporcionalidad */
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Igual que WhatsApp */
+    box-shadow: 0 4px 6px var(--primary-color); /* Igual que WhatsApp */
     transition: transform 0.3s ease, background 0.3s ease;
     z-index: 100;
     overflow: visible;
