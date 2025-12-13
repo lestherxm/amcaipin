@@ -91,9 +91,16 @@ pokerCards.forEach(pokerCard => {
 
         const diffX = touchStartX - touchEndX;
 
-        /* Swipe hacia la izquierda */
+        // Swipe hacia la izquierda → siguiente carta
         if (diffX > swipeThreshold) {
             pokerIndex = (pokerIndex + 1) % pokerCards.length;
+            updatePokerStack();
+        }
+
+        // Swipe hacia la derecha → carta anterior
+        if (diffX < -swipeThreshold) {
+            pokerIndex =
+                (pokerIndex - 1 + pokerCards.length) % pokerCards.length;
             updatePokerStack();
         }
     });
