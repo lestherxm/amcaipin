@@ -1,0 +1,114 @@
+.poker_services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 16px;
+    scroll-margin-top: 80px; /* Ajusta según la altura de tu header */
+    margin-top: 12px;
+    user-select: none;
+}
+
+.poker_stack {
+    position: relative;
+    width: 260px;
+    height: 360px;
+    perspective: 1000px;
+}
+
+.poker_card {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #fff;
+
+    transform:
+        rotate(calc(var(--offset) * 4deg))
+        translateX(calc(var(--offset) * 10px));
+
+    transition:
+        transform 0.55s cubic-bezier(.4, 0, .2, 1),
+        z-index 0.55s,
+        opacity 0.4s;
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.poker_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poker_card--active {
+    transform: rotate(0deg) translateX(0) scale(1.04);
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .poker_stack {
+        width: 300px;
+        height: 420px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .poker_stack {
+        width: 340px;
+        height: 460px;
+    }
+
+    .poker_card:hover {
+        transform: translateY(-6px) scale(1.03);
+    }
+}
+
+/* POKER PHRASE */
+
+.poker_phrase {
+    margin-top: 64px;
+    padding: 0 16px;
+
+    max-width: 320px;
+    text-align: center;
+
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color: #444;
+    opacity: 0.9;
+}
+
+.poker_phrase::before {
+    content: "";
+    display: block;
+
+    width: 36px;
+    height: 4px;
+
+    margin: 0 auto 12px;
+
+    /* background-color: #111; */
+    background-color: var(--primary-color-dark);
+    opacity: 0.2;
+    border-radius: 2px;
+}
+
+@media (min-width: 768px) {
+    .poker_phrase {
+        max-width: 420px;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .poker_phrase {
+        max-width: 480px;
+        font-size: 2.5rem;
+    }
+}
