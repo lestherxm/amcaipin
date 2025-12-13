@@ -1,19 +1,17 @@
 .poker_services {
+    scroll-margin-top: 80px; /* Ajusta según la altura de tu header */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px 16px;
-    scroll-margin-top: 80px; /* Ajusta según la altura de tu header */
-    margin-top: 12px;
-    user-select: none;
 }
 
 .poker_stack {
     position: relative;
-    width: 260px;
-    height: 360px;
-    perspective: 1000px;
+    width: 250px;
+    height: 350px;
+    perspective: 900px;
+    transform: translate(-22px);
 }
 
 .poker_card {
